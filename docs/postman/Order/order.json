@@ -1,0 +1,984 @@
+{
+	"info": {
+		"_postman_id": "9825bba2-694b-4f26-97dd-3069d616503b",
+		"name": "Webnode",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40908029"
+	},
+	"item": [
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Empty list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/order",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"order"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jan 2025 18:54:38 GMT"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "noindex"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"items\": [],\n    \"pagination\": {\n        \"current_page\": 1,\n        \"has_previous_page\": false,\n        \"has_next_page\": false,\n        \"per_page\": 10,\n        \"total_items\": 0,\n        \"total_pages\": 1\n    }\n}"
+						},
+						{
+							"name": "Not empty list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/order",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"order"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jan 2025 18:55:33 GMT"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "noindex"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"items\": [\n        {\n            \"createdAt\": \"2025-01-09T18:54:59+00:00\",\n            \"orderNumber\": \"20250001\",\n            \"name\": \"Moje prvni objednavka\",\n            \"currency\": \"CZK\",\n            \"state\": \"draft\",\n            \"items\": [\n                {\n                    \"name\": \"1. polozka\",\n                    \"quantity\": 1,\n                    \"price\": 12.99,\n                    \"totalPrice\": {\n                        \"price\": 12.99,\n                        \"currency\": \"CZK\",\n                        \"decimalPlaces\": 2,\n                        \"decimalSeparator\": null,\n                        \"thousandsSeparator\": null\n                    }\n                },\n                {\n                    \"name\": \"2. polozka\",\n                    \"quantity\": 1,\n                    \"price\": 12.99,\n                    \"totalPrice\": {\n                        \"price\": 12.99,\n                        \"currency\": \"CZK\",\n                        \"decimalPlaces\": 2,\n                        \"decimalSeparator\": null,\n                        \"thousandsSeparator\": null\n                    }\n                }\n            ],\n            \"id\": 1\n        }\n    ],\n    \"pagination\": {\n        \"current_page\": 1,\n        \"has_previous_page\": false,\n        \"has_next_page\": false,\n        \"per_page\": 10,\n        \"total_items\": 1,\n        \"total_pages\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "View",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/order/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"order",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/order/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"order",
+										"1"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jan 2025 18:54:47 GMT"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "noindex"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Order not found\",\n    \"trace\": \"#0 /app/src/Order/Controller/OrderController.php(36): App\\\\Order\\\\Controller\\\\OrderController->findEntity(Object(App\\\\Order\\\\Repository\\\\OrderRepository), NULL)\\n#1 /app/vendor/symfony/http-kernel/HttpKernel.php(183): App\\\\Order\\\\Controller\\\\OrderController->view(Object(App\\\\Order\\\\Repository\\\\OrderRepository), 1)\\n#2 /app/vendor/symfony/http-kernel/HttpKernel.php(76): Symfony\\\\Component\\\\HttpKernel\\\\HttpKernel->handleRaw(Object(Symfony\\\\Component\\\\HttpFoundation\\\\Request), 1)\\n#3 /app/vendor/symfony/http-kernel/Kernel.php(182): Symfony\\\\Component\\\\HttpKernel\\\\HttpKernel->handle(Object(Symfony\\\\Component\\\\HttpFoundation\\\\Request), 1, true)\\n#4 /app/vendor/symfony/runtime/Runner/Symfony/HttpKernelRunner.php(35): Symfony\\\\Component\\\\HttpKernel\\\\Kernel->handle(Object(Symfony\\\\Component\\\\HttpFoundation\\\\Request))\\n#5 /app/vendor/autoload_runtime.php(29): Symfony\\\\Component\\\\Runtime\\\\Runner\\\\Symfony\\\\HttpKernelRunner->run()\\n#6 /app/public/index.php(5): require_once('/app/vendor/aut...')\\n#7 {main}\"\n}"
+						},
+						{
+							"name": "View order",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/order/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"order",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jan 2025 18:55:20 GMT"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "noindex"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"createdAt\": \"2025-01-09T18:54:59+00:00\",\n    \"orderNumber\": \"20250001\",\n    \"name\": \"Moje prvni objednavka\",\n    \"currency\": \"CZK\",\n    \"state\": \"draft\",\n    \"items\": [\n        {\n            \"name\": \"1. polozka\",\n            \"quantity\": 1,\n            \"price\": 12.99,\n            \"totalPrice\": {\n                \"price\": 12.99,\n                \"currency\": \"CZK\",\n                \"decimalPlaces\": 2,\n                \"decimalSeparator\": null,\n                \"thousandsSeparator\": null\n            }\n        },\n        {\n            \"name\": \"2. polozka\",\n            \"quantity\": 1,\n            \"price\": 12.99,\n            \"totalPrice\": {\n                \"price\": 12.99,\n                \"currency\": \"CZK\",\n                \"decimalPlaces\": 2,\n                \"decimalSeparator\": null,\n                \"thousandsSeparator\": null\n            }\n        }\n    ],\n    \"id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Moje prvni objednavka\",\r\n    \"currency\": \"CZK\",\r\n    \"items\": [\r\n        {\r\n            \"name\": \"1. polozka\",\r\n            \"price\": 12.99,\r\n            \"quantity\": 1.00\r\n        },\r\n        {\r\n            \"name\": \"2. polozka\",\r\n            \"price\": 12.99,\r\n            \"quantity\": 1.00\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Created order",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Moje prvni objednavka\",\r\n    \"currency\": \"CZK\",\r\n    \"items\": [\r\n        {\r\n            \"name\": \"1. polozka\",\r\n            \"price\": 12.99,\r\n            \"quantity\": 1.00\r\n        },\r\n        {\r\n            \"name\": \"2. polozka\",\r\n            \"price\": 12.99,\r\n            \"quantity\": 1.00\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/order",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"order"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jan 2025 18:54:59 GMT"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "noindex"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"createdAt\": \"2025-01-09T18:54:59+00:00\",\n    \"orderNumber\": \"20250001\",\n    \"name\": \"Moje prvni objednavka\",\n    \"currency\": \"CZK\",\n    \"state\": \"draft\",\n    \"items\": [\n        {\n            \"name\": \"1. polozka\",\n            \"quantity\": 1,\n            \"price\": 12.99,\n            \"totalPrice\": {\n                \"price\": 12.99,\n                \"currency\": \"CZK\",\n                \"decimalPlaces\": 2,\n                \"decimalSeparator\": null,\n                \"thousandsSeparator\": null\n            }\n        },\n        {\n            \"name\": \"2. polozka\",\n            \"quantity\": 1,\n            \"price\": 12.99,\n            \"totalPrice\": {\n                \"price\": 12.99,\n                \"currency\": \"CZK\",\n                \"decimalPlaces\": 2,\n                \"decimalSeparator\": null,\n                \"thousandsSeparator\": null\n            }\n        }\n    ],\n    \"price\": {\n        \"price\": 25.98,\n        \"currency\": \"CZK\",\n        \"decimalPlaces\": 2,\n        \"decimalSeparator\": null,\n        \"thousandsSeparator\": null\n    },\n    \"id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Moje treti objednavka\",\r\n    \"currency\": \"CZK\",\r\n    \"items\": [\r\n        {\r\n            \"name\": \"1. polozka\",\r\n            \"price\": 12.99,\r\n            \"quantity\": 3.00\r\n        },\r\n        {\r\n            \"name\": \"2. polozka\",\r\n            \"price\": 12.99,\r\n            \"quantity\": 1.00\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/order/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"order",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Not found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Moje treti objednavka\",\r\n    \"currency\": \"CZK\",\r\n    \"items\": [\r\n        {\r\n            \"name\": \"1. polozka\",\r\n            \"price\": 12.99,\r\n            \"quantity\": 3.00\r\n        },\r\n        {\r\n            \"name\": \"2. polozka\",\r\n            \"price\": 12.99,\r\n            \"quantity\": 1.00\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/order/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"order",
+										"1"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jan 2025 18:53:24 GMT"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "noindex"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Order not found\",\n    \"trace\": \"#0 /app/src/Order/Controller/OrderController.php(53): App\\\\Order\\\\Controller\\\\OrderController->findEntity(Object(App\\\\Order\\\\Repository\\\\OrderRepository), NULL)\\n#1 /app/vendor/symfony/http-kernel/HttpKernel.php(183): App\\\\Order\\\\Controller\\\\OrderController->update(Object(App\\\\Order\\\\Repository\\\\OrderRepository), 1, Object(Symfony\\\\Component\\\\HttpFoundation\\\\Request), Object(App\\\\Order\\\\Service\\\\OrderManager))\\n#2 /app/vendor/symfony/http-kernel/HttpKernel.php(76): Symfony\\\\Component\\\\HttpKernel\\\\HttpKernel->handleRaw(Object(Symfony\\\\Component\\\\HttpFoundation\\\\Request), 1)\\n#3 /app/vendor/symfony/http-kernel/Kernel.php(182): Symfony\\\\Component\\\\HttpKernel\\\\HttpKernel->handle(Object(Symfony\\\\Component\\\\HttpFoundation\\\\Request), 1, true)\\n#4 /app/vendor/symfony/runtime/Runner/Symfony/HttpKernelRunner.php(35): Symfony\\\\Component\\\\HttpKernel\\\\Kernel->handle(Object(Symfony\\\\Component\\\\HttpFoundation\\\\Request))\\n#5 /app/vendor/autoload_runtime.php(29): Symfony\\\\Component\\\\Runtime\\\\Runner\\\\Symfony\\\\HttpKernelRunner->run()\\n#6 /app/public/index.php(5): require_once('/app/vendor/aut...')\\n#7 {main}\"\n}"
+						},
+						{
+							"name": "Updated order",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Moje treti objednavka\",\r\n    \"currency\": \"CZK\",\r\n    \"items\": [\r\n        {\r\n            \"name\": \"1. polozka\",\r\n            \"price\": 12.99,\r\n            \"quantity\": 3.00\r\n        },\r\n        {\r\n            \"name\": \"2. polozka\",\r\n            \"price\": 12.99,\r\n            \"quantity\": 1.00\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/order/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"order",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jan 2025 18:56:11 GMT"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "noindex"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"createdAt\": \"2025-01-09T18:54:59+00:00\",\n    \"orderNumber\": \"20250001\",\n    \"name\": \"Moje treti objednavka\",\n    \"currency\": \"CZK\",\n    \"state\": \"draft\",\n    \"items\": {\n        \"2\": {\n            \"name\": \"1. polozka\",\n            \"quantity\": 3,\n            \"price\": 12.99,\n            \"totalPrice\": {\n                \"price\": 38.97,\n                \"currency\": \"CZK\",\n                \"decimalPlaces\": 2,\n                \"decimalSeparator\": null,\n                \"thousandsSeparator\": null\n            }\n        },\n        \"3\": {\n            \"name\": \"2. polozka\",\n            \"quantity\": 1,\n            \"price\": 12.99,\n            \"totalPrice\": {\n                \"price\": 12.99,\n                \"currency\": \"CZK\",\n                \"decimalPlaces\": 2,\n                \"decimalSeparator\": null,\n                \"thousandsSeparator\": null\n            }\n        }\n    },\n    \"price\": {\n        \"price\": 51.96,\n        \"currency\": \"CZK\",\n        \"decimalPlaces\": 2,\n        \"decimalSeparator\": null,\n        \"thousandsSeparator\": null\n    },\n    \"id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Moje treti objednavka\",\r\n    \"currency\": \"CZK\",\r\n    \"items\": [\r\n        {\r\n            \"name\": \"1. polozka\",\r\n            \"price\": 12.99,\r\n            \"quantity\": 3.00\r\n        },\r\n        {\r\n            \"name\": \"2. polozka\",\r\n            \"price\": 12.99,\r\n            \"quantity\": 1.00\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/order/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"order",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Not found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Moje treti objednavka\",\r\n    \"currency\": \"CZK\",\r\n    \"items\": [\r\n        {\r\n            \"name\": \"1. polozka\",\r\n            \"price\": 12.99,\r\n            \"quantity\": 3.00\r\n        },\r\n        {\r\n            \"name\": \"2. polozka\",\r\n            \"price\": 12.99,\r\n            \"quantity\": 1.00\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/order/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"order",
+										"1"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jan 2025 18:53:48 GMT"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "noindex"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Order not found\",\n    \"trace\": \"#0 /app/src/Order/Controller/OrderController.php(64): App\\\\Order\\\\Controller\\\\OrderController->findEntity(Object(App\\\\Order\\\\Repository\\\\OrderRepository), NULL)\\n#1 /app/vendor/symfony/http-kernel/HttpKernel.php(183): App\\\\Order\\\\Controller\\\\OrderController->delete(Object(App\\\\Order\\\\Repository\\\\OrderRepository), 1, Object(App\\\\Order\\\\Service\\\\OrderManager))\\n#2 /app/vendor/symfony/http-kernel/HttpKernel.php(76): Symfony\\\\Component\\\\HttpKernel\\\\HttpKernel->handleRaw(Object(Symfony\\\\Component\\\\HttpFoundation\\\\Request), 1)\\n#3 /app/vendor/symfony/http-kernel/Kernel.php(182): Symfony\\\\Component\\\\HttpKernel\\\\HttpKernel->handle(Object(Symfony\\\\Component\\\\HttpFoundation\\\\Request), 1, true)\\n#4 /app/vendor/symfony/runtime/Runner/Symfony/HttpKernelRunner.php(35): Symfony\\\\Component\\\\HttpKernel\\\\Kernel->handle(Object(Symfony\\\\Component\\\\HttpFoundation\\\\Request))\\n#5 /app/vendor/autoload_runtime.php(29): Symfony\\\\Component\\\\Runtime\\\\Runner\\\\Symfony\\\\HttpKernelRunner->run()\\n#6 /app/public/index.php(5): require_once('/app/vendor/aut...')\\n#7 {main}\"\n}"
+						},
+						{
+							"name": "Deleted order",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Moje treti objednavka\",\r\n    \"currency\": \"CZK\",\r\n    \"items\": [\r\n        {\r\n            \"name\": \"1. polozka\",\r\n            \"price\": 12.99,\r\n            \"quantity\": 3.00\r\n        },\r\n        {\r\n            \"name\": \"2. polozka\",\r\n            \"price\": 12.99,\r\n            \"quantity\": 1.00\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/order/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"order",
+										"1"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jan 2025 18:56:30 GMT"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "noindex"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Order Items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/order/1/items",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"order",
+								"1",
+								"items"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/order/1/items",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"order",
+										"1",
+										"items"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jan 2025 18:58:19 GMT"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "noindex"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Order not found\",\n    \"trace\": \"#0 /app/src/Order/Controller/OrderController.php(72): App\\\\Order\\\\Controller\\\\OrderController->findEntity(Object(App\\\\Order\\\\Repository\\\\OrderRepository), NULL)\\n#1 /app/vendor/symfony/http-kernel/HttpKernel.php(183): App\\\\Order\\\\Controller\\\\OrderController->items(Object(App\\\\Order\\\\Repository\\\\OrderRepository), 1)\\n#2 /app/vendor/symfony/http-kernel/HttpKernel.php(76): Symfony\\\\Component\\\\HttpKernel\\\\HttpKernel->handleRaw(Object(Symfony\\\\Component\\\\HttpFoundation\\\\Request), 1)\\n#3 /app/vendor/symfony/http-kernel/Kernel.php(182): Symfony\\\\Component\\\\HttpKernel\\\\HttpKernel->handle(Object(Symfony\\\\Component\\\\HttpFoundation\\\\Request), 1, true)\\n#4 /app/vendor/symfony/runtime/Runner/Symfony/HttpKernelRunner.php(35): Symfony\\\\Component\\\\HttpKernel\\\\Kernel->handle(Object(Symfony\\\\Component\\\\HttpFoundation\\\\Request))\\n#5 /app/vendor/autoload_runtime.php(29): Symfony\\\\Component\\\\Runtime\\\\Runner\\\\Symfony\\\\HttpKernelRunner->run()\\n#6 /app/public/index.php(5): require_once('/app/vendor/aut...')\\n#7 {main}\"\n}"
+						},
+						{
+							"name": "List order items",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/order/1/items",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"order",
+										"1",
+										"items"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jan 2025 18:58:44 GMT"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "noindex"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"name\": \"1. polozka\",\n        \"quantity\": 1,\n        \"price\": 12.99,\n        \"totalPrice\": {\n            \"price\": 12.99,\n            \"currency\": \"CZK\",\n            \"decimalPlaces\": 2,\n            \"decimalSeparator\": null,\n            \"thousandsSeparator\": null\n        }\n    },\n    {\n        \"name\": \"2. polozka\",\n        \"quantity\": 1,\n        \"price\": 12.99,\n        \"totalPrice\": {\n            \"price\": 12.99,\n            \"currency\": \"CZK\",\n            \"decimalPlaces\": 2,\n            \"decimalSeparator\": null,\n            \"thousandsSeparator\": null\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Update State",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/order/1/change-status/paid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"order",
+								"1",
+								"change-status",
+								"paid"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Not found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/order/1/change-status/paid",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"order",
+										"1",
+										"change-status",
+										"paid"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jan 2025 19:07:33 GMT"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "noindex"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"\\\"App\\\\Order\\\\Entity\\\\Order\\\" object not found by \\\"Symfony\\\\Bridge\\\\Doctrine\\\\ArgumentResolver\\\\EntityValueResolver\\\".\",\n    \"trace\": \"#0 /app/vendor/symfony/http-kernel/Controller/ArgumentResolver/TraceableValueResolver.php(37): Symfony\\\\Bridge\\\\Doctrine\\\\ArgumentResolver\\\\EntityValueResolver->resolve(Object(Symfony\\\\Component\\\\HttpFoundation\\\\Request), Object(Symfony\\\\Component\\\\HttpKernel\\\\ControllerMetadata\\\\ArgumentMetadata))\\n#1 /app/vendor/symfony/http-kernel/Controller/ArgumentResolver.php(91): Symfony\\\\Component\\\\HttpKernel\\\\Controller\\\\ArgumentResolver\\\\TraceableValueResolver->resolve(Object(Symfony\\\\Component\\\\HttpFoundation\\\\Request), Object(Symfony\\\\Component\\\\HttpKernel\\\\ControllerMetadata\\\\ArgumentMetadata))\\n#2 /app/vendor/symfony/http-kernel/Controller/TraceableArgumentResolver.php(33): Symfony\\\\Component\\\\HttpKernel\\\\Controller\\\\ArgumentResolver->getArguments(Object(Symfony\\\\Component\\\\HttpFoundation\\\\Request), Array, Object(ReflectionMethod))\\n#3 /app/vendor/symfony/http-kernel/HttpKernel.php(175): Symfony\\\\Component\\\\HttpKernel\\\\Controller\\\\TraceableArgumentResolver->getArguments(Object(Symfony\\\\Component\\\\HttpFoundation\\\\Request), Array, Object(ReflectionMethod))\\n#4 /app/vendor/symfony/http-kernel/HttpKernel.php(76): Symfony\\\\Component\\\\HttpKernel\\\\HttpKernel->handleRaw(Object(Symfony\\\\Component\\\\HttpFoundation\\\\Request), 1)\\n#5 /app/vendor/symfony/http-kernel/Kernel.php(182): Symfony\\\\Component\\\\HttpKernel\\\\HttpKernel->handle(Object(Symfony\\\\Component\\\\HttpFoundation\\\\Request), 1, true)\\n#6 /app/vendor/symfony/runtime/Runner/Symfony/HttpKernelRunner.php(35): Symfony\\\\Component\\\\HttpKernel\\\\Kernel->handle(Object(Symfony\\\\Component\\\\HttpFoundation\\\\Request))\\n#7 /app/vendor/autoload_runtime.php(29): Symfony\\\\Component\\\\Runtime\\\\Runner\\\\Symfony\\\\HttpKernelRunner->run()\\n#8 /app/public/index.php(5): require_once('/app/vendor/aut...')\\n#9 {main}\"\n}"
+						},
+						{
+							"name": "Update State",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/order/1/change-status/paid",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"order",
+										"1",
+										"change-status",
+										"paid"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jan 2025 19:09:16 GMT"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "noindex"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"createdAt\": \"2025-01-09T19:08:25+00:00\",\n    \"orderNumber\": \"20250002\",\n    \"name\": \"Moje prvni objednavka\",\n    \"currency\": \"CZK\",\n    \"state\": \"paid\",\n    \"items\": [\n        {\n            \"name\": \"1. polozka\",\n            \"quantity\": 1,\n            \"price\": 12.99,\n            \"totalPrice\": {\n                \"price\": 12.99,\n                \"currency\": \"CZK\",\n                \"decimalPlaces\": 2,\n                \"decimalSeparator\": null,\n                \"thousandsSeparator\": null\n            }\n        },\n        {\n            \"name\": \"2. polozka\",\n            \"quantity\": 1,\n            \"price\": 12.99,\n            \"totalPrice\": {\n                \"price\": 12.99,\n                \"currency\": \"CZK\",\n                \"decimalPlaces\": 2,\n                \"decimalSeparator\": null,\n                \"thousandsSeparator\": null\n            }\n        }\n    ],\n    \"id\": 1\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

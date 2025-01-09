@@ -8,6 +8,11 @@ framework:
     #esi: true
     #fragments: true
 
+    error_controller: App\Shared\Controller\ApiErrorController::show
+
+    property_info:
+        enabled: true
+
 when@test:
     framework:
         test: true
