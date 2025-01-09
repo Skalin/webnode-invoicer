@@ -4,7 +4,7 @@
   "minimum-stability": "stable",
   "prefer-stable": true,
   "require": {
-    "php": ">=8.2",
+    "php": ">=8.4",
     "ext-ctype": "*",
     "ext-iconv": "*",
     "babdev/pagerfanta-bundle": "^4.5",
@@ -15,7 +15,7 @@
     "doctrine/orm": "^3.3.1",
     "pagerfanta/doctrine-orm-adapter": "^4.7.1",
     "pagerfanta/twig": "^4.7.1",
-    "phpdocumentor/reflection-docblock": "*",
+    "phpdocumentor/reflection-docblock": ">=5.6.1",
     "phpstan/phpdoc-parser": "^1.33",
     "symfony/console": "7.2.*",
     "symfony/dotenv": "7.2.*",
@@ -31,9 +31,9 @@
     "symfony/yaml": "7.2.*"
   },
   "require-dev": {
-    "phpstan/phpstan": "^2.1",
-    "phpstan/phpstan-symfony": "^2.0",
-    "phpunit/phpunit": "^9.6",
+    "phpstan/phpstan": "^2.1.1",
+    "phpstan/phpstan-symfony": "^2.0.1",
+    "phpunit/phpunit": "^9.6.22",
     "slevomat/coding-standard": "^8.15",
     "squizlabs/php_codesniffer": "^3.11.2",
     "symfony/browser-kit": "7.2.*",
@@ -42,7 +42,7 @@
   },
   "config": {
     "platform": {
-      "php": "8.3"
+      "php": "8.4"
     },
     "allow-plugins": {
       "php-http/discovery": true,
