@@ -6,9 +6,9 @@ namespace App\Order\Service;
 
 use App\Order\Repository\OrderRepository;
 
-class OrderQuery
+readonly class OrderQuery
 {
-    public function __construct(private readonly OrderRepository $repository)
+    public function __construct(private OrderRepository $repository)
     {
     }
 

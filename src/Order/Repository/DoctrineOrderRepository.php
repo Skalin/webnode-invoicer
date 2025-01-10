@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Order\Repository;
 
 use App\Order\Entity\Order;
-use App\Shared\Repository\EntityRepository;
 use App\Shared\Symfony\Request\Query\QueryParamsProvider;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -15,7 +14,6 @@ use Pagerfanta\PagerfantaInterface;
 
 /**
  * @extends ServiceEntityRepository<Order>
- * @implements EntityRepository<Order>
  */
 class DoctrineOrderRepository extends ServiceEntityRepository implements OrderRepository
 {
