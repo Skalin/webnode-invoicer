@@ -18,4 +18,11 @@ class JsonResponseFormatter implements ResponseFormatter
     {
         return $this->serializer->serialize($data, self::FORMAT, $context);
     }
+
+    public function getResponseHeaders(): array
+    {
+        return [
+            'Content-Type' => 'application/json'
+        ];
+    }
 }

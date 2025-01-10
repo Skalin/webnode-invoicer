@@ -10,4 +10,9 @@ interface ResponseFormatter
      * @param array<string, mixed> $context Options normalizers/encoders have access to
      */
     public function format(mixed $data, array $context = []): mixed;
+
+    /**
+     * @return array<mixed, mixed>
+     */
+    public function getResponseHeaders(): array;
 }

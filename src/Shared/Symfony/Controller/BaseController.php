@@ -42,7 +42,7 @@ class BaseController extends AbstractController
         return new Response(
             content: $this->responseFormatter->format($data),
             status: $status,
-            headers: \array_merge($headers, ['Content-Type' => 'application/json']),
+            headers: \array_merge($headers, $this->responseFormatter->getResponseHeaders()),
         );
     }
 }
